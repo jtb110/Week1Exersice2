@@ -12,13 +12,21 @@ package week1exersice2;
 public class ThreadTwo {
 
     public static void main(String[] args) {
-        
+
         Even even = new Even();
         ThreadHere first = new ThreadHere(even);
         ThreadHere second = new ThreadHere(even);
         first.start();
         second.start();
-        
+
     }
 
 }
+/*
+ * Even objektet bliver tilgået af begge threads. sync gør at de ikke kan tilgå det samtidig
+ * 
+ * 
+ *Problemet vil opstå hver gang flere threads ikke er synced og prøver at tilgå samme objekt
+ *
+ *
+ */
